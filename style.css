@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+.container-accordion {
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.accordion-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1em solid black;
+
+}
+input[type=radio]{
+    display: none;
+}
+.accordion-content{
+    display:none;
+}
+.container-accordion input:checked~.accordion-content{
+    display: block;
+}
+
