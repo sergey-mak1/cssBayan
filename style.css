@@ -9,7 +9,10 @@
 .accordion-title{
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1em solid black;
+    border-top: 0.1em solid rgb(62, 61, 61);
+    padding: 0.25em;
+    font-size: 1.5em;
+    color: blue;
 
 }
 input[type=radio]{
@@ -18,7 +21,39 @@ input[type=radio]{
 .accordion-content{
     display:none;
 }
+.title-ico{
+    width: 1em;
+    background-image: url(./assets/svg/add_circle_icon_250513.svg);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: 0.5s;
+}
 .container-accordion input:checked~.accordion-content{
     display: block;
 }
+.container-accordion input:checked~.accordion-title {
+    color: black;
+}
+.container-accordion input:checked~.accordion-title .title-ico{
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
 
+.container-accordion:hover .title-ico{
+    opacity: 1;
+    transition: 0.5s;
+}
+.container-accordion:hover .accordion-title{
+   color: black;
+}
+
+.accordion-item:hover .accordion-content{
+    display: block;
+}
+
+.accordion-item:hover .title-ico{
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
