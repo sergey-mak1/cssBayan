@@ -99,7 +99,23 @@ input[type=radio] {
         color: black;
     }
 }
-
+@media (max-width:1920px)  {
+    .container-accordion {
+        width: 50%;
+    }
+    .accordion-head{
+        font-size: 2em;
+    }
+    .accordion-title{
+        font-size: 1em;
+    }
+    .image-accordion{
+        width: 40%;
+    }
+    .container-accordion input:checked~.accordion-content {
+        height: 25rem;
+    }
+}
 @media (max-width:820px)  {
     .container-accordion {
         width: 75%;
